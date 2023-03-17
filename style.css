@@ -14,15 +14,22 @@ body {
   margin: 100px 0 250px 0;
 }
 
+.gradient {
+  background-color: rgb(110, 110, 231);
+  background-image: linear-gradient(rgb(110, 110, 231), pink);
+}
+
 section {
   display: flex;
   flex-direction: column;
-  width: 55%;
+  width: 50%;
   background-color: #283e50;
+  border-radius: 20px 20px 0 0;
 }
 
 img {
   width: 100%;
+  border-radius: 20px 20px 0 0;
 }
 
 h1 {
@@ -43,20 +50,24 @@ h2 {
   color: #ffffff;
 }
 
-.green {
-  background-color: #1fcca4;
-  border: #1fcca4;
-  margin: 0 0 2px 0;
+button {
   height: 80px;
-  padding: 0;
+  border: 0;
+  margin: 2px 0 0 0;
 }
 
-button .green:hover {
-  color: #1cbb96;
+.green {
+  background-color: #1fcca4;
+}
+
+.green:hover {
+  background-color: #1cbb96;
 }
 
 .blu {
   background-color: #0197f6;
-  border: #0197f6;
-  height: 80px;
+}
+
+.blu:hover {
+  background-color: #0090e9;
 }

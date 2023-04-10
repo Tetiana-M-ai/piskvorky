@@ -118,7 +118,7 @@ footer {
   background-image: linear-gradient(rgb(123, 123, 238), pink);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  margin: 0;
+  margin: 50px 50px;
 }
 
 h2 {
@@ -127,20 +127,13 @@ h2 {
   color: white;
 }
 
-.circle {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  border-style: solid;
-  color: white;
+.name {
+  margin: 0 auto;
 }
 
 .playInfo {
-  padding: 0;
-  text-align: center;
+  max-width: 80vmin;
   margin: 0 auto;
-  display: flex;
-  display: block;
 
 }
 
@@ -154,6 +147,12 @@ h2 {
   flex: 0 0 80%;
   justify-content: flex-start;
   align-items: center;
+}
+
+#player {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
 }
 
 .right {
@@ -185,24 +184,76 @@ h2 {
   background-color: #0090e9;
 }
 
-.row {
-  padding: 0;
-  margin: 0;
-  height: 4vw;
-  border: 1px solid black;
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(10, auto);
+  padding-top: 20px;
 }
 
-button {
-  width: 4vw;
-  height: 4vw;
-  padding: 0;
-  margin: 0;
+.gridItem {
+  width: 100%;
+  height: 100%;
   border: 1px solid black;
-  background-color: #c1b4d7;
+  padding: 20px;
+  cursor: pointer;
+  background-color: transparent;
+  aspect-ratio: 1/1;
 }
 
-button:hover,
-button:focus,
-button:active {
-  background-color: #e3cbe0;
+.gridItem:hover,
+.gridItem:focus {
+  background-color: #ffc8da;
+  opacity: .2;
+}
+
+/*Ukol 3*/
+
+.board__player--circle {
+  height: 20px;
+  width: 20px;
+  border-radius: 60%;
+  border: 3px solid white;
+  display: inline-block;
+  align-self: center;
+  margin-left: 0.5rem;
+}
+
+.board__player--cross {
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  align-self: center;
+  margin-left: 0.5rem;
+  background:
+    linear-gradient(45deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 43%, #fff 45%, #fff 55%, rgba(0, 0, 0, 0) 57%, rgba(0, 0, 0, 0) 100%),
+    linear-gradient(135deg, #8e8bd790 0%, #8e8bd790 43%, #fff 45%, #fff 55%, #8e8bd790 57%, #8e8bd790 100%);
+}
+
+
+.board__field--circle {
+  background-image: url(circle.svg);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.board__field--cross {
+  background-image: url(cross.svg);
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.zoom {
+  animation: zoom 0.45s;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(0.5, 0.5);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
 }

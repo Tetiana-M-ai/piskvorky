@@ -5,22 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hra</title>
-    <link rel="stylesheet" href="./style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
-      rel="stylesheet"
-    />
+    href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+    rel="stylesheet"
+  />
+    <link rel="stylesheet" href="style.css" />
+    <script src="hra.js" type="module"></script>
   </head>
-
-  
   <body class="hra">
-    <h1>Piškvorky</h1>
+    <h1 class="name">Piškvorky</h1>
 
     <div class="playInfo">
       <div class="left">
         <div class="leftInfo">
           <h2>Hraje:</h2>
-          <div class="circle"></div>
+          <span id="player" class="board__player--circle"></span>
         </div>
 
         <nav class="right">
@@ -34,58 +33,108 @@
         </nav>
       </div>
 
-      <div class="row">
-        <button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"
-        ><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"
-        ><button class="button"></button class="button"><button class="button"></button class="button">
+      <div class="gridContainer">
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
+        <button class="gridItem"></button>
       </div>
-      <div class="row">
-        <button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"
-        ><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"
-        ><button class="button"></button class="button"><button class="button"></button class="button">
-      </div>
-      <div class="row">
-        <button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"
-        ><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"
-        ><button class="button"></button class="button"><button class="button"></button class="button">
-      </div>
-      <div class="row">
-        <button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"
-        ><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"
-        ><button class="button"></button class="button"><button class="button"></button class="button">
-      </div>
-      <div class="row">
-        <button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"
-        ><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"
-        ><button class="button"></button class="button"><button class="button"></button class="button">
-      </div>
-      <div class="row">
-        <button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"
-        ><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"
-        ><button class="button"></button class="button"><button class="button"></button class="button">
-      </div>
-      <div class="row">
-        <button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"
-        ><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"
-        ><button class="button"></button class="button"><button class="button"></button class="button">
-      </div>
-      <div class="row">
-        <button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"
-        ><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"
-        ><button class="button"></button class="button"><button class="button"></button class="button">
-      </div>
-      <div class="row">
-        <button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"
-        ><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"
-        ><button class="button"></button class="button"><button class="button"></button class="button">
-      </div>
-      <div class="row">
-        <button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"
-        ><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"><button class="button"></button class="button"
-        ><button class="button"></button class="button"><button class="button"></button class="button">
-      </div>
-    </div>
-
 
   </body>
 </html>

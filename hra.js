@@ -16,12 +16,12 @@ const changeMove = (event) => {
     player.className = 'board__player--circle';
   }
   event.target.disabled = true;
-  herniPole();
+  playGround();
 };
 
 const signs = document.querySelectorAll('.gridContainer button');
 
-const herniPole = () => {
+const playGround = () => {
   const gameArray = Array.from(signs).map((sign) => {
     if (sign.classList.contains('board__field--circle')) {
       return 'o';

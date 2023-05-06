@@ -9,6 +9,7 @@ const changeMove = (event) => {
     event.target.classList.add('board__field--circle', 'zoom');
     currentPlayer = 'cross';
     player.className = 'board__player--cross';
+    answer();
   } else if (currentPlayer === 'cross') {
     event.target.classList.add('board__field--cross', 'zoom');
     currentPlayer = 'circle';
@@ -34,12 +35,12 @@ const herniPole = () => {
 
   if (winner === 'x') {
     setTimeout(() => {
-      alert('Won the cross');
+      alert('Congratulation! The cross won');
       location.reload();
     }, 200);
   } else if (winner === 'o') {
     setTimeout(() => {
-      alert('Won the circle');
+      alert('Congratulation! The circle won');
       location.reload();
     }, 200);
   } else if (winner === 'tie') {
@@ -49,6 +50,50 @@ const herniPole = () => {
     }, 200);
   }
 };
+const answer = () => {
+  btnElm.forEach((button) => {
+    button.disabled = true;
+  });
+
+  const playingField = Array.from(btnElm);
+  const findIt = playingField.map((button) => {
+    if (button.classList.contains('board__field--circle')) {
+      return 'o';
+    } else if (button.classList.contains('board__field--cross')) {
+      return 'x';
+    } else {
+      return '_';
+    }
+  });
+
+  fetch('https://piskvorky.czechitas-podklady.cz/api/suggest-next-move', {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify({
+      board: findIt,
+      player: 'x',
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const { x, y } = data.position;
+      const index = x + y * 10;
+      btnElm.forEach((button) => {
+        if (
+          button.classList.contains('board__field--cross') ||
+          button.classList.contains('board__field--circle')
+        ) {
+          button.disabled = true;
+        } else {
+          button.disabled = false;
+        }
+      });
+
+      btnElm[index].click();
+    });
+};
 
 btnElm.forEach((button) => {
   button.addEventListener('click', changeMove);
@@ -56,7 +101,7 @@ btnElm.forEach((button) => {
 
 const restart = document.querySelector('.rightRestart');
 restart.addEventListener('click', (event) => {
-  if (!confirm('Opravdu chces zacit znovu?')) {
+  if (!confirm('Would you like to start the game agan?')) {
     event.preventDefault();
   }
 });
